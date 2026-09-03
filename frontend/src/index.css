@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f8fd;
+  color: #172554;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+/* =========================
+   Header
+========================= */
+
+.top-header {
+  min-height: 95px;
+  padding: 18px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e5eaf2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  border-radius: 15px;
+  font-size: 30px;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+.brand-info h1 {
+  margin: 0;
+  font-size: 27px;
+  color: #10245b;
+}
+
+.brand-info span {
+  display: block;
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #64748b;
+}
+
+.header-badge {
+  padding: 13px 20px;
+  border-radius: 12px;
+  background: #eff5ff;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   Main Layout
+========================= */
+
+.dashboard {
+  width: 94%;
+  max-width: 1450px;
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+}
+
+/* =========================
+   Form Card
+========================= */
+
+.form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 27px;
+}
+
+.section-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #eaf1ff;
+  font-size: 29px;
+}
+
+.section-header h2 {
+  margin: 0 0 5px;
+  font-size: 26px;
+  color: #10245b;
+}
+
+.section-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* =========================
+   Form
+========================= */
+
+.prediction-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #172554;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  height: 47px;
+  padding: 0 13px;
+  border: 1px solid #d8e0eb;
+  border-radius: 9px;
+  background: white;
+  color: #334155;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-group input::placeholder {
+  color: #94a3b8;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* =========================
+   Prediction Button
+========================= */
+
+.prediction-form button {
+  grid-column: 1 / -1;
+  height: 52px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prediction-form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
+}
+
+.prediction-form button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-error {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 11px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #dc2626;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   Right Information Card
+========================= */
+
+.info-card {
+  padding: 25px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #edf4ff, #e4edff);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.house-visual {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.65);
+  overflow: hidden;
+}
+
+.house-icon {
+  font-size: 145px;
+  filter: drop-shadow(0 10px 8px rgba(15, 23, 42, 0.12));
+}
+
+.info-card > h2 {
+  margin: 0 0 25px;
+  font-size: 23px;
+  color: #10245b;
+}
+
+.feature {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 21px;
+}
+
+.feature-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #dbe8ff;
+  font-size: 20px;
+}
+
+.feature h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #1d4ed8;
+}
+
+.feature p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.secure-box {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #475569;
+  font-size: 13px;
+}
+
+/* =========================
+   Result Page
+========================= */
+
+.result-page {
+  width: 90%;
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 55px 30px;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.result-page h1 {
+  margin-bottom: 20px;
+  color: #10245b;
+}
+
+.result-label {
+  margin-bottom: 10px;
+  color: #64748b;
+  font-size: 18px;
+}
+
+.price {
+  margin: 25px 0 35px;
+  color: #2563eb;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1000px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    order: -1;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-header {
+    padding: 15px 20px;
+  }
+
+  .header-text,
+  .header-badge {
+    display: none;
+  }
+
+  .brand-info h1 {
+    font-size: 20px;
+  }
+
+  .brand-info span {
+    font-size: 10px;
+  }
+
+  .brand-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 25px;
+  }
+
+  .dashboard {
+    width: 94%;
+    margin: 18px auto;
+  }
+
+  .form-card,
+  .info-card {
+    padding: 20px;
+  }
+
+  .prediction-form {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  .house-visual {
+    height: 170px;
+  }
+
+  .house-icon {
+    font-size: 105px;
+  }
+
+  .price {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Node
+node_modules/
+frontend/dist/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Raw dataset
+*.csv
+
+# Large model files
+*.pkl
+
+# Keep the final trained model
+!backend/models/house_price.pkl
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary root files
+/house_price.pkl
+/house_price_model.pkl
+/house_price_50.pkl
+/house_price_compressed.pkl
