@@ -33,9 +33,10 @@ app = FastAPI(
 # Allow the React frontend to communicate with the API
 app.add_middleware(
     CORSMiddleware,
-   allow_origins=[
+  allow_origins=[
     "http://localhost:5173",
     "http://localhost:5174",
+    "https://house-price-prediction-vert-two.vercel.app",
 ],
     allow_credentials=True,
     allow_methods=["*"],
