@@ -17,7 +17,7 @@ This project is an end-to-end Machine Learning application for house price predi
 The user enters property details such as carpet area, location, floor, bathrooms, balconies, parking, furnishing, and ownership.
 The data is processed and passed to a trained Machine Learning model through a FastAPI backend. The prediction is then displayed through a React web interface.
 
-✨ Main Features
+## ✨ Main Features
 - Data Cleaning and Preprocessing
 - Exploratory Data Analysis (EDA)
 - Feature Engineering
@@ -31,7 +31,7 @@ The data is processed and passed to a trained Machine Learning model through a F
 - Automated API Testing with Pytest
 - Docker Support
 
-#️ System Architecture
+## System Architecture
 
 
 ```mermaid
@@ -43,7 +43,7 @@ flowchart TD
     E --> F[Random Forest Model]
     F --> G[house_price.pkl]
     G --> H[FastAPI Backend]
-    H --> I[/predict API]
+    H --> I[Prediction API]
     I --> J[React + TypeScript Frontend]
     J --> K[Predicted House Price]
 ```
